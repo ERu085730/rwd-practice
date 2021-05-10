@@ -1,0 +1,123 @@
+$primary-color: #FDE0C8;
+$sub-color: #C4B8B6;
+$font-color:#ff7a83;
+
+@mixin margin-padding {
+  margin:0;
+  padding:0;
+}
+
+a{
+  text-decoration:none;
+}
+img{
+  object-fit: cover;
+  width:100%;
+  height:100%;
+}
+body{
+  background-color: $sub-color;
+  margin:0 auto;
+  padding:0;
+  color: $font-color;
+}
+
+header{
+  position:fixed;
+  display:flex;
+  background-color: $primary-color;
+  justify-content: space-between;
+  align-items: center;
+  width:100vw;
+
+  h1{
+    padding-left: 2.5vw;
+  }
+
+  ul{
+    display:flex;
+    list-style: none;
+    padding-right: 10vw;
+    li{
+      padding-left:20px;
+
+      a{
+        color:$font-color;
+      }
+    }
+  }
+}
+
+.img-f{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15vh;
+
+  figure{
+    font-size: 0;
+    flex:1 0 33vw;
+    @include margin-padding();
+  }
+}
+
+article{
+  section{
+    background-color: $primary-color;
+    border: solid 5px $sub-color;
+    border-radius: 20px;
+    margin: 20px 0 20px 0;
+    padding:0 0 20px 10px;
+  }
+  
+  
+}
+
+.img-s{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  padding-bottom: 20px;
+  figure{
+    @include margin-padding();
+  }
+}
+
+footer{
+  background-color: $primary-color;
+  height: 75px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+@media screen and(max-width:600px){
+  header{
+    flex-direction: column;
+
+    h1{
+        padding-left: 0;
+      }
+
+    ul{
+      width: 100vw;
+      flex-direction: column;
+      @include margin-padding();
+      li{
+        padding-left: 0;
+        padding-top:1.5vh;
+        height: 4vh;
+        text-align: center;
+        border-top: 1px solid $sub-color;
+      }
+    }
+  }
+
+  .img-f{
+    padding-top:30vh;
+    flex-direction: column;
+  }
+
+  .img-s{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
