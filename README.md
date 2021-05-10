@@ -4,11 +4,11 @@
 https://rwd-practice-heroku.herokuapp.com/
 
 技術:
-js:
+js:</br>
 -node.js</br>
 -express
 
-css:
--grid
--flex
+css:</br>
+-grid</br>
+-flex</br>
 -sass
